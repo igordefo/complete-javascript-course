@@ -77,3 +77,36 @@ console.log(typeof('Igor is awesome'));
 var x;
 console.log(typeof(x));
 */
+
+/********************************
+* Operator precedence
+*/
+
+var now = 2019;
+var yearIgor = 1990;
+var fullAge = 18;
+
+// Multiple operators
+var isFullAge = now - yearIgor >= fullAge;
+console.log(isFullAge);
+
+// Grouping
+var ageIgor = now - yearIgor;
+var ageJohn = 35;
+var average = (ageIgor + ageJohn) / 2;
+console.log(average);
+
+//  Multiple assignment
+x = y = (20 + 10) / 15 * 2;
+var x = 10;
+console.log(x, y);
+
+// More operators
+x *= 4;
+console.log(x);
+x += 5;
+console.log(x);
+x++;
+console.log(x);
+--x
+console.log(x);
