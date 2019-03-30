@@ -81,7 +81,7 @@ console.log(typeof(x));
 /********************************
 * Operator precedence
 */
-
+/*
 var now = 2019;
 var yearIgor = 1990;
 var fullAge = 18;
@@ -110,7 +110,7 @@ x++;
 console.log(x);
 --x
 console.log(x);
-
+*/
 /********************************
 * Coding challenge #1
 */
@@ -124,7 +124,7 @@ Mark and John are trying to compare their BMI (Body Mass Index), which is calcul
 
 GOOD LUCK 😀
 */
-
+/*
 var massIgor = 64;
 var massJohn = 65;
 var heightIgor = 1.78;
@@ -137,3 +137,38 @@ var compareBMI = bmiIgor > bmiJohn;
 
 console.log(bmiIgor);
 console.log('Is Igor\'s BMI higher than John\'s' + ' ' + compareBMI);
+*/
+/********************************
+* if / else statement
+*/
+/*
+var firstName = 'Igor';
+var civilStatus = 'married';
+
+if (civilStatus === 'married') {
+  console.log(firstName + ' is married.')
+};
+
+var civilStatus = false;
+if (civilStatus) {
+  console.log(firstName + ' is married.')
+} else {
+  console.log(firstName + ' is single.')
+};
+
+var massIgor = 69;
+var massJohn = 65;
+var heightIgor = 1.78;
+var heightJohn = 1.76;
+
+var bmiIgor = massIgor / Math.pow(heightIgor, 2);
+var bmiJohn = massJohn / Math.pow(heightJohn, 2);
+
+var compareBMI = bmiIgor > bmiJohn;
+
+if(compareBMI) {
+  console.log('Igor\'s BMI higher than John\'s')
+} else {
+  console.log('John\'s BMI higher than Igor\'s')
+};
+*/
