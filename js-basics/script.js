@@ -299,3 +299,50 @@ switch(true) {
   break
   default: console.log('Draw');
 }
+
+/*****************************
+* Functions
+*/
+
+function calculateAge(birthYear) {
+  return 2019 - birthYear;
+}
+
+var ageIgor = calculateAge(1990);
+var ageJane = calculateAge(1984);
+var ageJohn = calculateAge(1988);
+
+console.log(ageIgor, ageJane, ageJohn);
+
+function yearUntilRetirement(year, firstName) {
+  var age = calculateAge(year);
+  var retirement = 65 - age;
+  console.log(firstName + ' retires in ' + retirement + ' years');
+}
+
+yearUntilRetirement(1990, 'Igor');
+yearUntilRetirement(1984, 'Jane');
+yearUntilRetirement(1988, 'John');
+
+/*****************************
+* Functions statements and expressions
+*/
+
+//funcrion declaration
+// function whatDoYouDo(job, firstName) {}
+
+// Function expression
+var whatDoYouDo = function(job, firstName) {
+  switch(job) {
+    case 'teacher':
+    return firstName + ' is a teacher';
+    case 'designer':
+    return firstName + ' is a designer';
+    case 'programmer':
+    return firstName + ' is a programmer';
+    default:
+    return firstName + ' does something else';
+  }
+}
+
+console.log(whatDoYouDo('designer', 'Igor'))
