@@ -175,7 +175,7 @@ if(compareBMI) {
 /********************************
 * Boolean logic
 */
-
+/*
 var firstName = 'Igor';
 var age = 29;
 
@@ -188,11 +188,11 @@ if (age <= 13) {
 } else {
   console.log(firstName + ' is a man')
 }
-
+*/
 /********************************
 * The Ternary Operator and Switch Statements
 */
-
+/*
 var firstName = 'Igor';
 var age = 17;
 // Ternary Operator
@@ -231,3 +231,25 @@ switch(true) {
   default:
   console.log(firstName + ' is a man')
 }
+*/
+/********************************
+* Truthy and Falsy Values and Equality Operators
+*/
+
+// falsy values: undefined, 0, null, '', NaN
+// truthy values: NOT falsy values
+
+var height;
+height = '0';
+
+if(height || height === 0) {
+  console.log('Variable is defined');
+} else {
+  console.log('Variable has not been defined');
+}
+
+// Equality operators
+if(height == 0) {
+  console.log('Operator == does type coercion');
+}
+
