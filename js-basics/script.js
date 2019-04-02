@@ -470,3 +470,22 @@ jane.birthYear = 1994;
 
 console.log(jane);
 
+/*****************************
+* Objects and methods
+*/
+
+var igor = {
+  firstName: 'Igor',
+  lastName: 'Posunko',
+  birthYear: 1990,
+  job: 'worker',
+  family: ['Kristina', 'Oleg', 'Irina'],
+  isMarried:  true,
+  calcAge: function(birthYear) {
+    this.age = 2019 - this.birthYear;
+  }
+};
+
+igor.calcAge();
+console.log(igor);
+
