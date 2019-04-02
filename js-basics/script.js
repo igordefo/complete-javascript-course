@@ -274,7 +274,7 @@ it's no problem :)
 
 GOOD LUCK 😀
 */
-
+/*
 var avgJohnTeam = (300 + 94 + 123) / 3;
 var avgMikeTeam = (500 + 94 + 123) / 3;
 var avgMary = (500 + 134 + 105) / 3;
@@ -299,11 +299,11 @@ switch(true) {
   break
   default: console.log('Draw');
 }
-
+*/
 /*****************************
 * Functions
 */
-
+/*
 function calculateAge(birthYear) {
   return 2019 - birthYear;
 }
@@ -323,11 +323,11 @@ function yearUntilRetirement(year, firstName) {
 yearUntilRetirement(1990, 'Igor');
 yearUntilRetirement(1984, 'Jane');
 yearUntilRetirement(1988, 'John');
-
+*/
 /*****************************
 * Functions statements and expressions
 */
-
+/*
 //funcrion declaration
 // function whatDoYouDo(job, firstName) {}
 
@@ -346,11 +346,11 @@ var whatDoYouDo = function(job, firstName) {
 }
 
 console.log(whatDoYouDo('designer', 'Igor'));
-
+*/
 /*****************************
 * Arrays
 */
-
+/*
 var names = ['Igor', 'John', 'Jane'];
 var years = new Array(1990, 1988, 1984);
 
@@ -377,7 +377,7 @@ console.log(user);
 console.log(user.indexOf('worker'));
 var isWorker = user.indexOf('worker') === -1 ? 'Igor is not worker' : 'Igor is worker';
 console.log(isWorker);
-
+*/
 /*****************************
 * CODING CHALLENGE 3
 */
@@ -396,7 +396,7 @@ In the end, John would like to have 2 arrays:
 
 GOOD LUCK 😀
 */
-
+/*
 var allTips = [];
 var finalAmount = [];
 
@@ -437,3 +437,36 @@ finalAmount.push(finalTips(268));
 
 console.log(finalAmount);
 console.log(allTips);
+*/
+/*****************************
+* Objects and properties
+*/
+
+// Object literal
+var igor = {
+  firstName: 'Igor',
+  lastName: 'Posunko',
+  birthYear: 1990,
+  job: 'worker',
+  family: ['Kristina', 'Oleg', 'Irina'],
+  isMarried:  true
+};
+
+console.log(igor.firstName);
+console.log(igor['lastName']);
+var x = 'birthYear';
+console.log(igor[x]);
+
+igor.job = 'programmer';
+igor['isMarried'] = false;
+console.log(igor);
+
+// new object syntax
+
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.lastName = 'Smith';
+jane.birthYear = 1994;
+
+console.log(jane);
+
