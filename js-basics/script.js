@@ -397,20 +397,43 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 */
 
-function calculator(bill1) {
+var allTips = [];
+var finalAmount = [];
 
-  if(bill1 < 50) {
-    var tips1 = bill1 * 0.2;
-  } else if(bill1 >= 50 && bill1 <= 200) {
-    var tips1 = bill1 * 0.15;
+var tipCalculator =  function(bill) {
+
+  if(bill < 50) {
+    var tips = bill * 0.2;
+  } else if(bill >= 50 && bill <= 200) {
+    var tips = bill * 0.15;
   } else {
-    var tips1 = bill1 * 0.1;
+    var tips = bill * 0.1;
   }
 
-
-  return tips1;
+  return tips;
 }
 
 
+var finalTips =  function(bill) {
 
-console.log(calculator(124));
+  if(bill < 50) {
+    var tips = bill + (bill * 0.2);
+  } else if(bill >= 50 && bill <= 200) {
+    var tips = bill + (bill * 0.15);
+  } else {
+    var tips = bill + (bill * 0.1);
+  }
+
+  return tips;
+}
+
+allTips.push(Math.round(tipCalculator(124)));
+allTips.push(Math.round(tipCalculator(48)));
+allTips.push(Math.round(tipCalculator(268)));
+
+finalAmount.push(finalTips(124));
+finalAmount.push(finalTips(48));
+finalAmount.push(finalTips(268));
+
+console.log(finalAmount);
+console.log(allTips);
