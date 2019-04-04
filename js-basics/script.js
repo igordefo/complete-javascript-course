@@ -235,7 +235,7 @@ switch(true) {
 /********************************
 * Truthy and Falsy Values and Equality Operators
 */
-
+/*
 // falsy values: undefined, 0, null, '', NaN
 // truthy values: NOT falsy values
 
@@ -252,7 +252,7 @@ if(height || height === 0) {
 if(height == 0) {
   console.log('Operator == does type coercion');
 }
-
+*/
 /*****************************
 * CODING CHALLENGE 2
 */
@@ -441,7 +441,7 @@ console.log(allTips);
 /*****************************
 * Objects and properties
 */
-
+/*
 // Object literal
 var igor = {
   firstName: 'Igor',
@@ -469,11 +469,11 @@ jane.lastName = 'Smith';
 jane.birthYear = 1994;
 
 console.log(jane);
-
+*/
 /*****************************
 * Objects and methods
 */
-
+/*
 var igor = {
   firstName: 'Igor',
   lastName: 'Posunko',
@@ -488,7 +488,7 @@ var igor = {
 
 igor.calcAge();
 console.log(igor);
-
+*/
 /*****************************
 * CODING CHALLENGE 4
 */
@@ -503,6 +503,7 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 
 GOOD LUCK 😀
 */
+/*
 var igor = {
   firstName: 'Igor',
   mass: 69,
@@ -535,3 +536,46 @@ if (igor.BMI > john.BMI) {
 } else {
   console.log('BMI is equall')
 }
+*/
+/*****************************
+* Loops and itteration
+*/
+
+// for loop
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+var user = ['Igor', 'Posunko', 1990, 'worker', true, 'blue'];
+
+for(var i = 0; i < user.length; i++) {
+  console.log(user[i]);
+}
+
+// while loop
+var i = 0;
+while (i < user.length) {
+  console.log(user[i]);
+  i++;
+}
+
+// continue and break statements
+
+for(var i = 0; i < user.length; i++) {
+  if (typeof(user[i]) !== 'string') {
+    continue
+  }
+  console.log(user[i]);
+}
+
+for(var i = 0; i < user.length; i++) {
+  if (typeof(user[i]) !== 'string') {
+    break
+  }
+  console.log(user[i]);
+}
+
+for(var i = user.length - 1; i >= 0; i--) {
+  console.log(user[i]);
+}
+
