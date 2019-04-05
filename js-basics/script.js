@@ -741,3 +741,33 @@ function third() {
   console.log(a + d);
 }
 
+///////////////////////////////////////
+// This keyword
+
+// console.log(this);
+
+function calculateAge(year) {
+  console.log(2019 - year);
+  console.log(this);
+}
+
+calculateAge(1990);
+
+var jonh = {
+  name: 'John',
+  birthYear: 1922,
+  calcAge: function() {
+    console.log(this);
+    console.log(2019 - this.birthYear);
+  }
+}
+
+jonh.calcAge();
+
+var mark = {
+  name: 'Mark',
+  birthYear: 1889,
+}
+
+mark.calcAge = jonh.calcAge;
+mark.calcAge();
