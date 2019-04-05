@@ -718,3 +718,26 @@ function foo() {
 
 foo();
 console.log(age);
+
+///////////////////////////////////////
+// Lecture: Scoping
+
+var a = 'Hello!';
+first();
+
+function first() {
+    var b = 'Hi!';
+    second();
+
+    function second() {
+        third();
+        var c = 'Hey!';
+        console.log(a + b + c);
+    }
+}
+
+function third() {
+  var d = 'John';
+  console.log(a + d);
+}
+
