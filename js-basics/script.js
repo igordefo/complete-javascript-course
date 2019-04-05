@@ -540,7 +540,7 @@ if (igor.BMI > john.BMI) {
 /*****************************
 * Loops and itteration
 */
-
+/*
 // for loop
 for (var i = 0; i < 10; i++) {
   console.log(i);
@@ -578,7 +578,7 @@ for(var i = 0; i < user.length; i++) {
 for(var i = user.length - 1; i >= 0; i--) {
   console.log(user[i]);
 }
-
+*/
 /*****************************
 * CODING CHALLENGE 5
 */
@@ -608,7 +608,7 @@ iteration store the current sum in a variable (starting from 0). After you have 
 
 GOOD LUCK 😀
 */
-
+/*
 var john = {
   bills: [124, 48, 268, 180, 42],
   calcTip: function() {
@@ -686,3 +686,35 @@ if (avgMarkTips > avgJohnTips) {
 } else {
   console.log('John has highest tips than Mark with ' + avgJohnTips + '$');
 }
+*/
+
+/*****************************
+* Hoisting
+*/
+
+// Function
+calculateAge(1990);
+
+function calculateAge(year) {
+  console.log(2019 - year);
+}
+
+// retirement(1990);
+
+var retirement = function(year) {
+  console.log(65 - (2019 - year));
+}
+
+// Variables
+
+console.log(age);
+var age = 23;
+console.log(age);
+
+function foo() {
+  var age = 65;
+  console.log(age);
+}
+
+foo();
+console.log(age);
