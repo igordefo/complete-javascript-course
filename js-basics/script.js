@@ -771,3 +771,11 @@ var mark = {
 
 mark.calcAge = jonh.calcAge;
 mark.calcAge();
+
+function up() {
+  return 42;
+}
+
+up.going = 'hello world';
+
+typeof(4);
