@@ -6,7 +6,7 @@
 //   birthYear: 1990,
 //   job: 'worker'
 // }
-
+/*
 var Person = function(name, birthYear, job) {
   this.name = name;
   this.birthYear = birthYear;
@@ -27,3 +27,17 @@ kris.calculateAge();
 console.log(igor);
 console.log(kris);
 console.log(john);
+*/
+
+// Object.create
+var personProto = {
+  calculateAge: function() {
+    console.log(2019 - this.birthYear);
+  }
+};
+
+var john = Object.create(personProto, {
+  name: {value: 'John'},
+  birthYear: {value: 1990},
+  job: {value: 'Worker'}
+});
