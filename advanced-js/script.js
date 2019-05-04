@@ -28,7 +28,7 @@ console.log(igor);
 console.log(kris);
 console.log(john);
 */
-
+/*
 // Object.create
 var personProto = {
   calculateAge: function() {
@@ -41,3 +41,39 @@ var john = Object.create(personProto, {
   birthYear: {value: 1990},
   job: {value: 'Worker'}
 });
+
+// Primitives vs objects
+var a = 23;
+var b = a;
+a = 46;
+console.log(a);
+console.log(b);
+
+// Objects
+var obj1 = {
+  name: 'John',
+  age: 26
+}
+var obj2 = obj1;
+obj1.age = 30;
+console.log(obj1.age);
+console.log(obj2.age);
+
+// Functions
+
+var age = 27;
+var obj = {
+  name: 'Igor',
+  city: 'Melitopol'
+};
+
+function change(a, b) {
+  a = 30;
+  b.city = 'Kyiv';
+}
+
+change(age, obj.city);
+
+console.log(age);
+console.log(obj.city);
+*/
