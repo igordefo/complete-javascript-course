@@ -77,7 +77,7 @@ change(age, obj.city);
 console.log(age);
 console.log(obj.city);
 */
-
+/*
 // Passing function as argument
 
 var years = [1990, 1963, 1935, 2013, 1976];
@@ -112,3 +112,29 @@ var fullAges = arrayCalc(ages, isFullAge);
 var heartRate = arrayCalc(ages, maxHeartRate);
 
 console.log(ages, fullAges, heartRate);
+*/
+
+// Function returning function
+
+function interviewQuestion(job) {
+
+  if (job === 'designer') {
+    return function(name) {
+      console.log('Hello, ' + name + '. Can you explain UX design to me?');
+    }
+  } else if (job === 'programmer') {
+    return function(name) {
+      console.log('Could I ask you some question about JS, ' + name + '?');
+    }
+  } else {
+    return function(name) {
+      console.log('Hello, ' + name + '! What do you do?');
+    }
+  }
+}
+
+var designerQuestion = interviewQuestion('designer');
+
+designerQuestion('Piter');
+
+interviewQuestion('programmer')('Monica');
