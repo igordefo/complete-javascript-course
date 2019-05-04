@@ -153,4 +153,31 @@ game();
   console.log(score >= 5 - goodLuck);
 })(5);
 
+// Closures
 
+function retirement(retirementAge) {
+  var a = ' years left until retirement';
+
+  return function(birthOfYear) {
+    var calculateAge = 2019 - birthOfYear;
+    console.log((retirementAge - calculateAge) + a);
+  }
+}
+
+
+retirement(65)(1990);
+
+function interviewQuestion(job) {
+
+  return function(name) {
+    if (job === 'designer') { 
+        console.log('Hello, ' + name + '. Can you explain UX design to me?');
+      } else if (job === 'programmer') {
+        console.log('Could I ask you some question about JS, ' + name + '?');
+    } else {
+        console.log('Hello, ' + name + '! What do you do?');
+    }
+  }
+}
+
+interviewQuestion('designer')('igor');
