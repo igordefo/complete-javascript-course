@@ -77,3 +77,38 @@ change(age, obj.city);
 console.log(age);
 console.log(obj.city);
 */
+
+// Passing function as argument
+
+var years = [1990, 1963, 1935, 2013, 1976];
+
+function arrayCalc(arr, fn) {
+  var arrRes = [];
+  for(var i = 0; i < arr.length; i++) {
+    arrRes.push(fn(arr[i]));
+  }
+  return arrRes;
+}
+
+function isFullAge(el) {
+  return el >= 18;
+}
+
+function calculateAge(el) {
+  return 2019 - el;
+}
+
+function maxHeartRate(el) {
+  if (el >=18 && el <= 81) {
+    return Math.round(206.9 - (0.67 + el));
+  } else {
+    return -1;
+  }
+  
+}
+
+var ages = arrayCalc(years, calculateAge);
+var fullAges = arrayCalc(ages, isFullAge);
+var heartRate = arrayCalc(ages, maxHeartRate);
+
+console.log(ages, fullAges, heartRate);
